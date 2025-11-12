@@ -2,73 +2,122 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>MotoX Performance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MX Horizon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Logo MotoX" class="logo">
-        <h1>MotoX Performance</h1>
-        <p>Vente de motocross — puissance, style et performance.</p>
-    </header>
 
-    <section class="intro">
-        <h2>Nos modèles phares</h2>
-        <p>Découvrez nos motocross les plus populaires, prêtes à conquérir les pistes et les terrains les plus extrêmes.</p>
-    </section>
-
-    <section class="motos">
-       <section class="motos">
-    <div class="moto">
-        <h3>🏍️ Honda CRF450R</h3>
-        <img src="images/honda.jpg" alt="Honda CRF450R" class="image-moto">
-        <p>Un moteur puissant, une tenue de route exemplaire et un design agressif. Parfaite pour les pilotes exigeants.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
-
-    <div class="moto">
-        <h3>🏁 Yamaha YZ450F</h3>
-        <img src="images/yamaha.jpg" alt="Yamaha YZ450F" class="image-moto">
-        <p>Fiable, rapide et précise — la Yamaha YZ est la référence des circuits de motocross.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
-
-    <div class="moto">
-        <h3>🔥 KTM 250 SX-F</h3>
-        <img src="images/ktm.jpg" alt="KTM 250 SX-F" class="image-moto">
-        <p>Légère, nerveuse et redoutablement efficace. Une moto conçue pour la victoire.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
-
-    <div class="moto">
-        <h3>💨 Husqvarna FC 450</h3>
-        <img src="images/husqvarna.jpg" alt="Husqvarna FC 450" class="image-moto">
-        <p>Alliance parfaite entre puissance et précision. Légère, maniable et ultra-performante, la FC 450 est la moto idéale pour dominer les circuits.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
-
-    <div class="moto">
-        <h3>🏆 Ducati Desmo450 MX</h3>
-        <img src="images/ducati.jpg" alt="Ducati Desmo450 MX" class="image-moto">
-        <p>La toute nouvelle Ducati Desmo450 MX combine design italien et puissance brute. Une révolution sur les terrains de cross.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
-
-    <div class="moto">
-        <h3>💚 Kawasaki KX 450F</h3>
-        <img src="images/kawasaki.jpg" alt="Kawasaki KX 450F" class="image-moto">
-        <p>Un moteur explosif, une maniabilité incroyable et une réputation de légende. La KX 450F, c’est la référence du cross japonais.</p>
-        <a href="#" class="btn-acheter">Acheter maintenant</a>
-    </div>
+<header>
+    <!-- Logo MX Horizon -->
+    <img src="images/logo-mxhorizon.png" alt="Logo MX Horizon" class="logo">
     
+    <h1>MX Horizon</h1>
+    <p>Vente de motocross — puissance, style et performance.</p>
+
+    <!-- Bouton d'inscription -->
+    <div class="register-container">
+        <a href="#" id="register-btn" class="register-link">👤 S’enregistrer</a>
+    </div>
+</header>
+
+<!-- Section des marques partenaires -->
+<section class="intro">
+    <h2>Nos marques partenaires</h2>
+    <p>Découvrez les meilleures marques de motocross, alliant puissance, technologie et style.</p>
 </section>
 
+<section class="logo-marques">
+    <div class="marque">
+        <a href="honda.html"> <!-- Lien vers la page Honda -->
+            <img src="images/honda-logo.png" alt="Logo Honda" class="logo-marque">
+            <h3>Honda</h3>
+        </a>
+    </div>
 
-    </section>
+    <div class="marque">
+        <img src="images/yamaha-logo.png" alt="Logo Yamaha" class="logo-marque">
+        <h3>Yamaha</h3>
+    </div>
 
-    <footer>
-        <p>📍 Lisbonne — contact@motoxperformance.com — © 2025 MotoX Performance</p>
-    </footer>
+    <div class="marque">
+        <img src="images/ktm-logo.png" alt="Logo KTM" class="logo-marque">
+        <h3>KTM</h3>
+    </div>
+
+    <div class="marque">
+        <img src="images/husqvarna-logo.png" alt="Logo Husqvarna" class="logo-marque">
+        <h3>Husqvarna</h3>
+    </div>
+
+    <div class="marque">
+        <img src="images/gasgas-logo.png" alt="Logo GasGas" class="logo-marque">
+        <h3>GasGas</h3>
+    </div>
+
+    <div class="marque">
+        <img src="images/kawasaki-logo.png" alt="Logo Kawasaki" class="logo-marque">
+        <h3>Kawasaki</h3>
+    </div>
+</section>
+
+<!-- Section des pièces détachées -->
+<section class="pieces">
+    <h2>Pièces détachées</h2>
+    <a href="#" class="btn-voir-plus">Voir plus</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>📍 Lisbonne — <a href="mailto:contact@mxhorizon.com">contact@mxhorizon.com</a> — 
+        ☎️ <a href="tel:+33766959752" class="phone-link">+33 07 66 95 97 52</a> — 
+        © 2025 MX Horizon
+    </p>
+</footer>
+
+<!-- Popup d'inscription -->
+<div id="register-popup" class="register-popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3>S’inscrire</h3>
+        <form>
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">S’inscrire</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Popup inscription
+    document.getElementById("register-btn").addEventListener("click", function() {
+        document.getElementById("register-popup").style.display = "flex";
+    });
+
+    // Fermer la popup
+    document.querySelector(".close-popup").addEventListener("click", function() {
+        document.getElementById("register-popup").style.display = "none";
+    });
+
+    // Fermer la popup en cliquant en dehors de celle-ci
+    window.addEventListener("click", function(event) {
+        if (event.target === document.getElementById("register-popup")) {
+            document.getElementById("register-popup").style.display = "none";
+        }
+    });
+</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 

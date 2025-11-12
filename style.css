@@ -1,97 +1,178 @@
-/* --- STYLE GLOBAL --- */
+/* ==== STYLE GLOBAL ==== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     margin: 0;
-    color: white;
+    padding: 0;
+    color: #fff;
     text-align: center;
-
-    /* ✅ Effet fibre de carbone réaliste */
-    background-color: #111;
+    background-color: #0e0e0e;
     background-image:
-        repeating-linear-gradient(45deg, #0e0e0e 0px, #0e0e0e 2px, #1a1a1a 2px, #1a1a1a 4px),
-        repeating-linear-gradient(-45deg, #0e0e0e 0px, #0e0e0e 2px, #1a1a1a 2px, #1a1a1a 4px);
+        repeating-linear-gradient(45deg, #0a0a0a 0px, #0a0a0a 2px, #1a1a1a 2px, #1a1a1a 4px),
+        repeating-linear-gradient(-45deg, #0a0a0a 0px, #0a0a0a 2px, #1a1a1a 2px, #1a1a1a 4px);
     background-size: 20px 20px;
     background-blend-mode: multiply;
-    background-attachment: fixed;
 }
 
-/* --- HEADER --- */
+/* ==== HEADER ==== */
 header {
     background: linear-gradient(135deg, #ff6600, #ff9933);
-    padding: 25px;
-    color: black;
+    padding: 40px 20px;
+    color: #000;
     box-shadow: 0 4px 20px rgba(255, 100, 0, 0.6);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-burger {
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.register-container {
+    z-index: 15;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.register-link {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.register-link:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .logo {
-    width: 120px;
-    display: block;
-    margin: 10px auto;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 42px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #000;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+header p {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* ==== INTRO ==== */
+.intro {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px 20px;
+    color: #fff;
+    border-bottom: 2px solid #ff6600;
+}
+
+.intro h2 {
+    font-size: 2.4em;
     color: #ff6600;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0 0 12px rgba(255, 100, 0, 0.8);
+    text-shadow: 0 0 8px rgba(255, 100, 0, 0.8);
 }
 
-h2 {
-    color: #ffd700;
-    margin-top: 40px;
-    text-transform: uppercase;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-}
-
-h3 {
-    color: #ff6600;
-    font-size: 24px;
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000,
-         0 0 8px rgba(255, 120, 0, 0.8);
-}
-
-p {
-    font-size: 17px;
-    width: 75%;
+.intro p {
+    max-width: 700px;
     margin: 10px auto;
-    line-height: 1.6;
+    font-size: 1.1em;
+    color: #ddd;
 }
 
-/* --- SECTION MOTOS --- */
-.motos {
+/* ==== LOGOS DES MARQUES ==== */
+.logo-marques {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    margin-top: 40px;
+    padding: 60px 20px;
 }
 
-.moto {
-    background-color: #141414;
+.marque {
+    background-color: #111;
     background-image:
         repeating-linear-gradient(45deg, #0e0e0e 0px, #0e0e0e 2px, #1a1a1a 2px, #1a1a1a 4px),
         repeating-linear-gradient(-45deg, #0e0e0e 0px, #0e0e0e 2px, #1a1a1a 2px, #1a1a1a 4px);
     background-size: 16px 16px;
-
     border-radius: 12px;
-    padding: 20px;
-    width: 300px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
     box-shadow: 0 0 25px rgba(255, 85, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.marque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255, 85, 0, 0.6);
+}
+
+.logo-marque {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.marque h3 {
+    color: #ff6600;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.marque h3 a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.marque h3 a:hover {
+    color: #fff;
+}
+
+/* ==== PAGE HONDA - AJUSTER LES IMAGES DES MOTOS ==== */
+.motos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.moto {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 250px; /* Ajuster la largeur des sections motos */
+    box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -102,46 +183,135 @@ p {
 
 .image-moto {
     width: 100%;
-    border-radius: 10px;
-    margin: 10px 0;
-    box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+    height: auto;
+    max-height: 200px; /* Limiter la hauteur des images des motos */
+    object-fit: contain; /* Garder les proportions de l'image */
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* --- BOUTONS --- */
-.btn-acheter {
+.moto h3 {
+    color: #ff6600;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.moto p {
+    color: #ddd;
+    font-size: 1em;
+}
+
+/* ==== PIECES DETACHEES ==== */
+.pieces {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+
+.pieces h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.btn-voir-plus {
     display: inline-block;
     background: linear-gradient(135deg, #ff6600, #ff9933);
     color: white;
     text-decoration: none;
     padding: 10px 25px;
-    margin-top: 10px;
     border-radius: 6px;
     font-weight: bold;
     transition: 0.3s;
     box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
-    text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
 }
 
-.btn-acheter:hover {
+.btn-voir-plus:hover {
     background: linear-gradient(135deg, #ffaa00, #ff7700);
-    color: black;
+    color: #000;
     transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 200, 0, 0.9);
 }
 
-/* --- FOOTER --- */
+/* ==== FOOTER ==== */
 footer {
     background-color: #1c1c1c;
-    padding: 15px;
-    margin-top: 50px;
-    color: #ccc;
+    padding: 20px;
+    color: #bbb;
     font-size: 14px;
     border-top: 2px solid #ff6600;
+    margin-top: 40px;
 }
+
+.phone-link {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.phone-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ==== POPUP INSCRIPTION ==== */
+.register-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    color: #fff;
+}
+
+.popup-content input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.popup-content button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #ff9933;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
